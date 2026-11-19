@@ -10,7 +10,7 @@ The platform combines a custom-trained PyTorch neural network with Sentence Tran
 - **Personality-Based Assessment:** Interactive questionnaire covering interests, problem-solving approaches, work preferences, technical skills, and career aspirations.
 - **Deep Learning Career Prediction:** Custom-trained Multi-Layer Perceptron (MLP) classifies user profiles into suitable career categories.
 - **Semantic Text Understanding:** Sentence Transformers extracts contextual embeddings from users' open-ended responses.
-- **AI Career Mentor:** Gemini-powered conversational assistant provides personalized career guidance and answers career-related queries.
+- **AI Career Mentor:** Google Gemini-powered conversational assistant provides personalized career guidance and answers career-related queries.
 - **Career Exploration:** Browse available career options and explore their descriptions.
 - **Learning Roadmaps:** Access structured learning paths for different career choices.
 - **Prediction Analytics:** View prediction confidence and probability scores across career categories.
@@ -23,19 +23,19 @@ The platform combines a custom-trained PyTorch neural network with Sentence Tran
 | Programming Language | Python, JavaScript |
 | Deep Learning | PyTorch |
 | NLP & Embeddings | Sentence Transformers |
-| Pretrained Embedding Model | all-MiniLM-L6-v2 |
+| Embedding Model | all-MiniLM-L6-v2 |
 | Generative AI | Google Gemini 2.0 Flash API |
 | Backend | FastAPI, Uvicorn |
 | Frontend | React.js, Vite |
 | Data Processing | Pandas, NumPy |
 | Machine Learning Utilities | Scikit-learn |
-| Visualization | Chart.js, React Chart.js 2 |
+| Visualization | Chart.js |
 | API Communication | Axios |
 | Model Serialization | Joblib |
 
 ## 🏗️ System Architecture
 
-The application follows a modular architecture consisting of a React frontend, a FastAPI backend, a custom-trained prediction model, and a Gemini-powered AI mentor.
+The application follows a modular architecture consisting of a React frontend, FastAPI backend, custom-trained prediction model, and Gemini-powered AI mentor.
 
 ### 1. User Assessment
 
@@ -58,13 +58,14 @@ User responses are transformed into a 447-dimensional feature vector:
 The processed feature vector is passed to a custom Multi-Layer Perceptron (MLP) implemented using PyTorch.
 
 The network architecture consists of:
+
 - Input Layer: 447 features
-- Hidden Layer 1: 256 neurons with ReLU and Dropout
-- Hidden Layer 2: 128 neurons with ReLU and Dropout
-- Hidden Layer 3: 64 neurons with ReLU and Dropout
+- Hidden Layer 1: 256 neurons
+- Hidden Layer 2: 128 neurons
+- Hidden Layer 3: 64 neurons
 - Output Layer: 10 career classes
 
-The model generates class probabilities using Softmax and identifies the highest-scoring career category.
+The model uses ReLU activation and Dropout for regularization. It generates class probabilities and identifies the highest-scoring career category.
 
 ### 4. AI-Powered Career Mentoring
 
@@ -72,7 +73,7 @@ Google Gemini 2.0 Flash powers the conversational career mentor.
 
 - Integrates career descriptions and learning-path information from `career_data.json` into the prompt.
 - Uses contextual prompting to answer career-related questions.
-- Restricts career and learning-path responses to the provided career data.
+- Provides personalized career guidance based on available career information.
 
 ### 5. Results & Career Exploration
 
@@ -136,19 +137,19 @@ Create and activate a virtual environment:
 python -m venv venv
 ```
 
-Windows:
+**Windows:**
 
 ```bash
 venv\Scripts\activate
 ```
 
-Linux/macOS:
+**Linux/macOS:**
 
 ```bash
 source venv/bin/activate
 ```
 
-Install the backend dependencies:
+Install the required dependencies:
 
 ```bash
 pip install torch numpy pandas scikit-learn joblib fastapi uvicorn pydantic sentence-transformers google-generativeai python-dotenv
@@ -164,6 +165,8 @@ GOOGLE_API_KEY=your_google_gemini_api_key
 
 Get your API key from [Google AI Studio](https://aistudio.google.com/).
 
+**Important:** Never commit your `.env` file or expose your API key publicly.
+
 ### 4. Train the Prediction Model (Optional)
 
 The repository includes the trained model and label encoder.
@@ -176,6 +179,7 @@ python train.py
 ```
 
 The training pipeline:
+
 - Generates a synthetic career prediction dataset using persona definitions.
 - Extracts semantic embeddings using Sentence Transformers.
 - Encodes career labels.
@@ -203,7 +207,7 @@ Interactive API documentation:
 http://127.0.0.1:8000/docs
 ```
 
-### 6. Frontend Setup
+### 6. Start the Frontend
 
 Open another terminal:
 
@@ -258,4 +262,6 @@ The training pipeline uses a train-validation split and saves the checkpoint wit
 - Generate personalized skill-gap analyses and learning roadmaps.
 - Deploy the application with scalable cloud infrastructure.
 
+---
 
+⭐ If you find this project interesting, consider giving it a star!
