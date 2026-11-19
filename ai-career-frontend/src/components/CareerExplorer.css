@@ -1,0 +1,34 @@
+.career-explorer {
+  margin-top: 30px;
+}
+.career-explorer button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+}
+.explorer-content {
+  margin-top: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.explorer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.explorer-content li {
+  padding: 15px;
+  border-bottom: 1px solid var(--light-gray);
+}
+.explorer-content li:last-child {
+  border-bottom: none;
+}
+.explorer-content li strong {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+.explorer-content li p {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,118 @@
+.questionnaire-form .card + .card {
+  margin-top: 25px;
+}
+.questionnaire-form h3 {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group:last-child {
+  margin-bottom: 0;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+.form-group input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.form-group textarea {
+  resize: vertical;
+}
+.slider-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider-group label span {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+.slider-fieldset {
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius);
+  padding: 10px 20px 20px;
+  margin-top: 20px;
+}
+.slider-fieldset legend {
+  font-weight: 600;
+  padding: 0 10px;
+}
+.checkbox-group label {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.checkbox-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.checkbox-label:hover {
+  border-color: var(--primary-color);
+}
+.checkbox-label input {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+.progress-bar-container {
+  width: 100%;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  margin-bottom: 25px;
+  position: relative;
+  height: 25px;
+}
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  transition: width 0.3s ease-in-out;
+}
+.progress-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 25px;
+  font-weight: 600;
+  color: #333;
+}
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  border-top: 1px solid var(--light-gray);
+  padding-top: 25px;
+}
+.navigation-buttons button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+}

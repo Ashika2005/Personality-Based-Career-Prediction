@@ -1,0 +1,21 @@
+/* src/ChatWidget.css */
+
+/* Change the chat widget header color */
+.rcw-header {
+  background-color: var(--primary-color);
+}
+
+/* Change the launcher button color */
+.rcw-launcher {
+  background-color: var(--primary-color);
+}
+
+/* Change the "Send" button color */
+.rcw-send .rcw-send-icon {
+  fill: var(--primary-color) !important;
+}
+
+/* Change the user's message bubbles */
+.rcw-message .rcw-client {
+  background-color: var(--primary-color);
+}

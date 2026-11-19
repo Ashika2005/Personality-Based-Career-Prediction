@@ -1,0 +1,66 @@
+.results-page .card + .card {
+  margin-top: 25px;
+}
+.prediction-summary {
+  text-align: center;
+}
+.prediction-summary h3 {
+  font-weight: 500;
+  color: #555;
+  margin: 0;
+}
+.prediction-summary h1 {
+  margin: 10px 0;
+  font-size: 2.8rem;
+}
+.confidence-score {
+  font-size: 1.2rem;
+  color: #333;
+}
+.confidence-score span {
+  font-weight: 700;
+  color: #28a745;
+}
+.chart-container {
+  max-width: 700px;
+  margin: 20px auto 0;
+}
+.chat-cta {
+  display: flex;
+  align-items: center;
+  background-color: #e6f7ff;
+  border: 1px solid #b3e0ff;
+}
+.chat-cta-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+}
+.chat-cta-icon svg {
+  width: 50px;
+  height: 50px;
+  fill: var(--primary-color);
+}
+.chat-cta-content {
+  flex-grow: 1;
+}
+.chat-cta-content h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+.chat-cta-content p {
+  margin: 5px 0 15px;
+  line-height: 1.5;
+}
+.chat-cta-content ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+}
+.chat-cta-content li {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}

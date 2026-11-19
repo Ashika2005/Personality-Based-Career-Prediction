@@ -1,0 +1,202 @@
+{
+  "Machine Learning Engineer": {
+    "description": "An ML Engineer designs and builds production-ready AI/ML models, works with large datasets, feature engineering, deployment and MLOps.",
+    "learning_path": [
+      {
+        "name": "Machine Learning Specialization - Coursera",
+        "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+        "type": "Course"
+      },
+      {
+        "name": "IBM AI Engineering Professional Certificate - Coursera",
+        "url": "https://www.coursera.org/professional-certificates/ai-engineer",
+        "type": "Course"
+      },
+      {
+        "name": "Build a personal ML project end-to-end (data, model, deployment)",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  },
+  "Software Engineer": {
+    "description": "A Software Engineer writes scalable, maintainable code, collaborates across teams, designs system architecture and delivers reliable applications.",
+    "learning_path": [
+      {
+        "name": "FreeCodeCamp Full Stack Developer Course",
+        "url": "https://www.freecodecamp.org/learn",
+        "type": "Course"
+      },
+      {
+        "name": "Clean Code: Writing Maintainable Software - Udemy",
+        "url": "https://www.udemy.com/course/writing-clean-code-humans/",
+        "type": "Course"
+      },
+      {
+        "name": "Contribute to open-source large codebase and build feature from scratch",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  },
+  "Robotics Engineer": {
+    "description": "A Robotics Engineer combines mechanics, electronics and software to build intelligent machines, autonomous systems, robot perception and control.",
+    "learning_path": [
+      {
+        "name": "Robotics Specialization - Coursera",
+        "url": "https://www.coursera.org/specializations/robotics",
+        "type": "Course"
+      },
+      {
+        "name": "Introduction to Embedded Systems - edX",
+        "url": "https://www.edx.org/course/introduction-to-embedded-systems",
+        "type": "Course"
+      },
+      {
+        "name": "Build and program a mobile robot with sensors and autonomy",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  },
+  "Mechanical Design Engineer": {
+    "description": "A Mechanical Design Engineer designs mechanical systems, uses CAD/CAE tools, optimises motion, structure, thermals and manufacturability of equipment.",
+    "learning_path": [
+      {
+        "name": "Mechanical Engineering Fundamentals - Coursera",
+        "url": "https://www.coursera.org/learn/mechanical-engineering-fundamentals",
+        "type": "Course"
+      },
+      {
+        "name": "Autodesk Fusion 360 for Mechanical Design - Udemy",
+        "url": "https://www.udemy.com/course/fusion-360-for-mechanical-design-and-engineering/",
+        "type": "Course"
+      },
+      {
+        "name": "Design a mechanical product from concept to CAD and simulate performance",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  },
+  "Data Scientist": {
+    "description": "A Data Scientist explores, analyses and visualises large datasets, builds predictive models and translates insights into business decisions.",
+    "learning_path": [
+      {
+        "name": "IBM Data Science Professional Certificate - Coursera",
+        "url": "https://www.coursera.org/professional-certificates/ibm-data-science",
+        "type": "Course"
+      },
+      {
+        "name": "Data Analysis with Python - freeCodeCamp",
+        "url": "https://www.freecodecamp.org/learn/data-analysis-with-python",
+        "type": "Course"
+      },
+      {
+        "name": "Create an end-to-end data science project (cleaning, modelling, visualising)",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  },
+  "Product Manager (Tech)": {
+    "description": "A Tech Product Manager sets product strategy, prioritises features, coordinates engineering/design/business, and delivers user-driven solutions.",
+    "learning_path": [
+      {
+        "name": "Technical Product Management Certificate - eCornell",
+        "url": "https://ecornell.cornell.edu/certificates/technology/technical-product-management/",
+        "type": "Course"
+      },
+      {
+        "name": "Product Management: From Design to Launch - Harvard DCE",
+        "url": "https://professional.dce.harvard.edu/programs/product-management-from-design-to-launch/",
+        "type": "Course"
+      },
+      {
+        "name": "Define, build & launch a product MVP working with dev/design teams",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  },
+  "Environmental Engineer": {
+    "description": "An Environmental Engineer designs systems and strategies to protect the environment, manage resources, resilience, sustainability and pollution control.",
+    "learning_path": [
+      {
+        "name": "Environmental Engineering Fundamentals - edX",
+        "url": "https://www.edx.org/course/environmental-engineering-fundamentals",
+        "type": "Course"
+      },
+      {
+        "name": "Sustainable Development: The Post-COVID World - Coursera",
+        "url": "https://www.coursera.org/learn/sustainable-development",
+        "type": "Course"
+      },
+      {
+        "name": "Develop a sustainability impact project for a local community or resource system",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  },
+  "UI/UX Designer": {
+    "description": "A UI/UX Designer focuses on the user experience, wireframing, interaction design, usability testing and creating intuitive digital interfaces.",
+    "learning_path": [
+      {
+        "name": "Google UX Design Professional Certificate - Coursera",
+        "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+        "type": "Course"
+      },
+      {
+        "name": "Figma for UX/UI Design - YouTube Tutorials",
+        "url": "https://www.youtube.com/watch?v=FTFaQWZBqQ8",
+        "type": "Video"
+      },
+      {
+        "name": "Design and prototype a mobile app UI and test with users",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  },
+  "Game Developer": {
+    "description": "A Game Developer codes gameplay, builds game mechanics, animations, physics, AI and user engagement to deliver interactive entertainment.",
+    "learning_path": [
+      {
+        "name": "Game Design and Development - Coursera",
+        "url": "https://www.coursera.org/specializations/game-design-and-development",
+        "type": "Course"
+      },
+      {
+        "name": "Complete Unity Developer - Udemy",
+        "url": "https://www.udemy.com/course/unitycourse/",
+        "type": "Course"
+      },
+      {
+        "name": "Build a complete 2D/3D game from concept to playable build",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  },
+  "Prompt Engineer": {
+    "description": "A Prompt Engineer crafts prompts and workflows for large language models (LLMs), improves model responses, alignment, and generative AI interactions.",
+    "learning_path": [
+      {
+        "name": "AI Engineering Specialization - Coursera",
+        "url": "https://www.coursera.org/specializations/ai-engineering",
+        "type": "Course"
+      },
+      {
+        "name": "Prompt Engineering for Everyone - Coursera",
+        "url": "https://www.coursera.org/courses?query=prompt%20engineering",
+        "type": "Course"
+      },
+      {
+        "name": "Experiment with LLM prompts and build a prompt-library for different task types",
+        "url": null,
+        "type": "Project"
+      }
+    ]
+  }
+}
