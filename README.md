@@ -1,0 +1,261 @@
+
+# 🧠 Personality-Based Career Prediction
+
+An AI-powered career guidance platform that leverages **Deep Learning, Natural Language Processing (NLP), and Generative AI** to recommend suitable career paths based on an individual's personality, interests, skills, and preferences.
+
+The platform combines a custom-trained PyTorch neural network with Sentence Transformers for semantic feature extraction and Google Gemini for conversational career guidance.
+
+## ✨ Features
+
+- **Personality-Based Assessment:** Interactive questionnaire covering interests, problem-solving approaches, work preferences, technical skills, and career aspirations.
+- **Deep Learning Career Prediction:** Custom-trained Multi-Layer Perceptron (MLP) classifies user profiles into suitable career categories.
+- **Semantic Text Understanding:** Sentence Transformers extracts contextual embeddings from users' open-ended responses.
+- **AI Career Mentor:** Gemini-powered conversational assistant provides personalized career guidance and answers career-related queries.
+- **Career Exploration:** Browse available career options and explore their descriptions.
+- **Learning Roadmaps:** Access structured learning paths for different career choices.
+- **Prediction Analytics:** View prediction confidence and probability scores across career categories.
+- **Responsive Web Interface:** React-based frontend integrated with a FastAPI backend.
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Programming Language | Python, JavaScript |
+| Deep Learning | PyTorch |
+| NLP & Embeddings | Sentence Transformers |
+| Pretrained Embedding Model | all-MiniLM-L6-v2 |
+| Generative AI | Google Gemini 2.0 Flash API |
+| Backend | FastAPI, Uvicorn |
+| Frontend | React.js, Vite |
+| Data Processing | Pandas, NumPy |
+| Machine Learning Utilities | Scikit-learn |
+| Visualization | Chart.js, React Chart.js 2 |
+| API Communication | Axios |
+| Model Serialization | Joblib |
+
+## 🏗️ System Architecture
+
+The application follows a modular architecture consisting of a React frontend, a FastAPI backend, a custom-trained prediction model, and a Gemini-powered AI mentor.
+
+### 1. User Assessment
+
+Users complete a personality questionnaire covering:
+- Logical and analytical thinking
+- Creative and problem-solving abilities
+- Technical interests and subject preferences
+- Work environment and collaboration preferences
+- Career aspirations and personal interests
+
+### 2. Feature Engineering & NLP
+
+User responses are transformed into a 447-dimensional feature vector:
+
+- **63 structured features:** Numerical, one-hot encoded, and multi-hot encoded questionnaire responses.
+- **384 semantic features:** Sentence embeddings generated using `all-MiniLM-L6-v2` from users' open-ended responses.
+
+### 3. Deep Learning Prediction
+
+The processed feature vector is passed to a custom Multi-Layer Perceptron (MLP) implemented using PyTorch.
+
+The network architecture consists of:
+- Input Layer: 447 features
+- Hidden Layer 1: 256 neurons with ReLU and Dropout
+- Hidden Layer 2: 128 neurons with ReLU and Dropout
+- Hidden Layer 3: 64 neurons with ReLU and Dropout
+- Output Layer: 10 career classes
+
+The model generates class probabilities using Softmax and identifies the highest-scoring career category.
+
+### 4. AI-Powered Career Mentoring
+
+Google Gemini 2.0 Flash powers the conversational career mentor.
+
+- Integrates career descriptions and learning-path information from `career_data.json` into the prompt.
+- Uses contextual prompting to answer career-related questions.
+- Restricts career and learning-path responses to the provided career data.
+
+### 5. Results & Career Exploration
+
+The backend exposes REST APIs to:
+- Predict suitable career categories.
+- Retrieve career descriptions.
+- Fetch career-specific learning paths.
+- Provide AI-powered conversational guidance.
+
+## 📂 Project Structure
+
+```text
+Personality-Based-Career-Prediction/
+│
+├── ai-career-frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── main.py
+├── model.py
+├── train.py
+├── dataset_generator.py
+│
+├── personas.json
+├── career_data.json
+├── career_prediction_dataset.csv
+│
+├── career_model.pth
+├── career_label_encoder.joblib
+│
+├── Career Prediction Questionnaire.pdf
+├── Project Report_ Personality-based Career Prediction (1).pdf
+├── Validation.png
+│
+└── README.md
+```
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+
+- Python 3.10 or later
+- Node.js and npm
+- Google Gemini API key
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Ashika2005/Personality-Based-Career-Prediction.git
+
+cd Personality-Based-Career-Prediction
+```
+
+### 2. Backend Setup
+
+Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Linux/macOS:
+
+```bash
+source venv/bin/activate
+```
+
+Install the backend dependencies:
+
+```bash
+pip install torch numpy pandas scikit-learn joblib fastapi uvicorn pydantic sentence-transformers google-generativeai python-dotenv
+```
+
+### 3. Configure Gemini API
+
+Create a `.env` file in the root directory:
+
+```env
+GOOGLE_API_KEY=your_google_gemini_api_key
+```
+
+Get your API key from [Google AI Studio](https://aistudio.google.com/).
+
+### 4. Train the Prediction Model (Optional)
+
+The repository includes the trained model and label encoder.
+
+To retrain the model, run:
+
+```bash
+python dataset_generator.py
+python train.py
+```
+
+The training pipeline:
+- Generates a synthetic career prediction dataset using persona definitions.
+- Extracts semantic embeddings using Sentence Transformers.
+- Encodes career labels.
+- Trains the neural network using PyTorch.
+- Evaluates performance on validation data.
+- Saves the best-performing model checkpoint.
+
+### 5. Start the Backend
+
+From the project root:
+
+```bash
+uvicorn main:app --reload --port 8000
+```
+
+Backend API:
+
+```text
+http://127.0.0.1:8000
+```
+
+Interactive API documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+### 6. Frontend Setup
+
+Open another terminal:
+
+```bash
+cd ai-career-frontend
+npm install
+npm run dev
+```
+
+Open the Vite development URL:
+
+```text
+http://localhost:5173
+```
+
+## 🔌 API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/` | Backend health/message endpoint |
+| POST | `/predict` | Predicts the most suitable career |
+| GET | `/careers` | Retrieves available careers and descriptions |
+| GET | `/learning-path/{career_name}` | Retrieves a career-specific learning path |
+| POST | `/chat` | Interacts with the Gemini-powered AI career mentor |
+
+## 🧪 Model Training & Evaluation
+
+The prediction model is trained using a supervised multi-class classification approach.
+
+| Parameter | Configuration |
+|---|---|
+| Architecture | Multi-Layer Perceptron |
+| Framework | PyTorch |
+| Input Dimensions | 447 |
+| Output Classes | 10 |
+| Hidden Layers | 256, 128, 64 |
+| Activation | ReLU |
+| Regularization | Dropout |
+| Loss Function | Cross Entropy Loss |
+| Optimizer | Adam |
+| Learning Rate | 0.001 |
+| Batch Size | 32 |
+| Training Epochs | 50 |
+
+The training pipeline uses a train-validation split and saves the checkpoint with the best validation accuracy.
+
+## 🔮 Future Enhancements
+
+- Introduce Retrieval-Augmented Generation (RAG) for more comprehensive, knowledge-grounded career guidance.
+- Expand career categories and incorporate real-world career datasets.
+- Improve model generalization using larger and more diverse datasets.
+- Generate personalized skill-gap analyses and learning roadmaps.
+- Deploy the application with scalable cloud infrastructure.
+
+
